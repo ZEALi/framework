@@ -20,6 +20,6 @@ class HostValidator implements ValidatorInterface
             return true;
         }
 
-        return preg_match($route->getCompiled()->getHostRegex(), $request->getHost());
+        return preg_match($route->getCompiled()->getHostRegex(), $request->getHttpHost());
     }
 }
